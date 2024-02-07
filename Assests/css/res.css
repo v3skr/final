@@ -50,20 +50,25 @@ main .menu-div {
   width: 80%;
 }
 main .menu-div .head {
+  background-color: #eee;
   margin-top: 1rem;
-  font-style: italic;
   background-color: #eee;
   border-radius: 20px;
 }
 main .menu-div .head .heart {
-  display: inline;
+  display: inline-block;
   margin-left: 3.5rem;
+  background-color: #eee !important;
+}
+main .menu-div .head .heart input,
+main .menu-div .head .heart label {
   background-color: #eee;
 }
 main .menu-div .head h1 {
+  font-family: "Shrikhand", serif !important;
   display: inline-block;
-  font-weight: 500;
   background-color: #eee;
+  font-weight: 900;
   border-radius: 20px 20px 0 0;
 }
 main .menu-div .options {
