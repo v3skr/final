@@ -1,0 +1,305 @@
+@import "./colors";
+@import "./loader";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ddd;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: $text;
+}
+.header {
+  height: 95px;
+  background-color: $bg1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    object-fit: contain;
+    width: 200px;
+    background-color: $bg1;
+  }
+}
+.button {
+  margin-top: 1rem;
+  border-radius: 25px;
+  background-color: $primary;
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  color: $bg1;
+  font-size: 15px;
+  box-shadow: 3px 3px 20px #e5e1e1;
+  background-image: linear-gradient(170deg, $secondary, $primary);
+}
+.loc {
+  width: 100%;
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-banner {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 240px;
+  padding: 1.5rem 0 2rem 0;
+  h1,
+  p {
+    background-color: #eee;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+.process {
+  background-color: $bg1;
+  height: 230px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 1rem;
+  h2 {
+    margin-bottom: -1rem;
+    background-color: $bg1;
+  }
+  .options {
+    background-color: $bg1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    div {
+      i {
+        margin-right: 5px;
+      }
+      position: relative;
+      margin-right: 2.5rem;
+      background-color: #eee;
+      height: 75px;
+      width: 100%;
+      max-width: 350px;
+      min-width: 200px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 5px 15px rgba(169, 169, 169, 0.19),
+        0 6px 6px rgba(166, 166, 166, 0.23);
+      p {
+        background-color: #eee;
+      }
+    }
+    .opt3 {
+      margin-right: 0;
+    }
+    .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $bg1;
+      background-color: $primary;
+      height: 23px;
+      width: 23px;
+      border-radius: 50%;
+      position: absolute;
+      left: -10px;
+      top: 30px;
+    }
+  }
+  .container {
+    max-width: 1150px;
+    // border: 1px solid #333;
+    width: 100%;
+    z-index: 10;
+    height: 150px;
+  }
+}
+.restaurants {
+  margin-bottom: 5rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  .center {
+    .title-section {
+      margin: 2rem 0;
+    }
+    width: 1150px;
+    max-width: 1150px;
+    .cards-section {
+      display: grid;
+      grid-gap: 3rem 5rem;
+      grid-template-columns: repeat(2, 1fr);
+      .card {
+        position: relative;
+        height: 240px;
+        border-radius: 20px;
+        background-color: $bg1;
+        img {
+          border-radius: 20px 20px 0 0;
+          width: 100%;
+          object-fit: cover;
+          height: 70%;
+        }
+        .new-tag {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background-color: $tri;
+          width: 75px;
+          height: 30px;
+          z-index: 20;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 2px;
+          p {
+            font-size: 14px;
+            background-color: $tri;
+          }
+        }
+        .info {
+          height: auto;
+          display: flex;
+          background-color: $bg1;
+          border-radius: 0 0 20px 20px;
+          .left {
+            h3,
+            p {
+              background-color: $bg1;
+            }
+            width: 80%;
+            background-color: $bg1;
+            padding: 1rem;
+            padding-top: 10px;
+            border-radius: 0 0 20px 20px;
+          }
+          .right {
+            div {
+              background-color: $bg1;
+            }
+            width: 20%;
+            background-color: $bg1;
+            border-radius: 0 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    background-color: #333;
+    color: $bg1;
+    margin-right: 1rem;
+    cursor: pointer;
+    i {
+      background-color: #333;
+      color: $bg1;
+      margin-right: 10px;
+    }
+  }
+  img {
+    background-color: #333;
+    color: $bg1;
+    position: absolute;
+    top: 40px;
+    right: 2rem;
+    width: 150px;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Heart checkbox styling */
+.heart-checkbox {
+  background-color: $bg1;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path fill="purple" d="M12 20.09l-.758-.727C5.477 14.693 2 11.273 2 7.5 2 4.42 4.42 2 7.5 2 9.818 2 11.936 3.236 12 5c.064-1.764 2.182-3 4.5-3C19.58 2 22 4.42 22 7.5c0 3.773-3.477 7.193-9.242 12.864L12 20.09z"/></svg>');
+  background-size: contain;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:not(:checked) + .heart-checkbox {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-width="2" d="M12 20.09l-.758-.727C5.477 14.693 2 11.273 2 7.5 2 4.42 4.42 2 7.5 2 9.818 2 11.936 3.236 12 5c.064-1.764 2.182-3 4.5-3C19.58 2 22 4.42 22 7.5c0 3.773-3.477 7.193-9.242 12.864L12 20.09z"/></svg>');
+  background-size: contain;
+}
+
+@media screen and (max-width: 650px) {
+  .top-banner {
+    h1 {
+      font-size: 1.75rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .cards-section {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .process {
+    height: 400px;
+    display: block;
+    .container {
+      h2 {
+        padding: 1rem;
+      }
+    }
+    .options {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      div {
+        margin: 1rem 0 0 0;
+        height: 70px !important;
+      }
+      .circle {
+        padding: 5px;
+      }
+    }
+  }
+  .footer {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding: 1rem 1.5rem;
+    height: 160px;
+    img {
+      top: 20px;
+      left: 1.5rem;
+      width: 125px;
+    }
+    a {
+      margin-bottom: 2px;
+    }
+  }
+}

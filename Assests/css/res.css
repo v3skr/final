@@ -1,0 +1,198 @@
+i {
+  cursor: pointer;
+}
+
+.image {
+  background-color: #fff;
+}
+.image img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+header {
+  position: relative;
+}
+header .arrow-back {
+  position: absolute;
+  background-color: #fff;
+  top: 2.25rem;
+  left: 2rem;
+  cursor: pointer;
+}
+header .arrow-back i {
+  font-size: 1.5rem;
+  background-color: #fff;
+}
+
+main {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1rem 0;
+  z-index: 10;
+  margin-top: -3rem;
+}
+main .menu-div {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eee;
+  border-radius: 20px;
+  width: 80%;
+}
+main .menu-div .head {
+  margin-top: 1rem;
+  font-style: italic;
+  background-color: #eee;
+  border-radius: 20px;
+}
+main .menu-div .head .heart {
+  display: inline;
+  margin-left: 3.5rem;
+  background-color: #eee;
+}
+main .menu-div .head h1 {
+  display: inline-block;
+  font-weight: 500;
+  background-color: #eee;
+  border-radius: 20px 20px 0 0;
+}
+main .menu-div .options {
+  margin-top: 2.5rem;
+  background-color: #eee;
+  width: 90%;
+}
+main .menu-div .options h3 {
+  background-color: #eee;
+}
+main .menu-div .options .head-title {
+  display: inline;
+  border-bottom: 2px solid #99e2d0;
+  font-weight: 100;
+  font-size: 15px;
+}
+main .menu-div .options div,
+main .menu-div .options .item,
+main .menu-div .options .t,
+main .menu-div .options p {
+  background-color: #fff;
+}
+main .menu-div .options p {
+  font-weight: 100;
+}
+main .menu-div .options .t {
+  font-weight: 500;
+}
+main .menu-div .options .item {
+  position: relative;
+  box-shadow: 5px 5px 15px rgba(169, 169, 169, 0.19), 0 6px 6px rgba(166, 166, 166, 0.23);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+main .menu-div .options .item .left {
+  min-width: 200px;
+}
+main .menu-div .options .item .left p,
+main .menu-div .options .item .left h3 {
+  margin: 0; /* Remove default margin */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis;
+}
+main .menu-div .options .item .price {
+  display: flex;
+  align-items: end;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+main .menu-div .options .item .side-box {
+  background-color: #99e2d0;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transition: all 0.3s ease;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+main .menu-div .options .item .side-box i {
+  background-color: #99e2d0;
+  color: #eee;
+}
+main .menu-div .options .item:hover .side-box {
+  animation: slide 0.3s forwards;
+}
+main .menu-div .options .item:hover .price {
+  margin-right: 75px;
+}
+main .menu-div .options .item:not(:hover) .side-box {
+  animation: reverse-slide 0.3s forwards;
+}
+
+button {
+  margin: 2rem 0 0 0 !important;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+    width: 0px;
+  }
+  100% {
+    opacity: 1;
+    width: 80px;
+  }
+}
+@keyframes reverse-slide {
+  0% {
+    width: 80px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  main {
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 20px;
+    margin-top: -4rem;
+  }
+  main .menu-div {
+    margin-bottom: 0;
+    width: 100% !important;
+    border-radius: 50px 50px 0 0;
+    background-color: #eee;
+  }
+  main .menu-div .head {
+    width: 100%;
+  }
+  main .menu-div .head .heart {
+    display: inline-block;
+    margin-left: 1rem;
+    background-color: #fff;
+  }
+  main .menu-div .head h1 {
+    text-align: start;
+  }
+}

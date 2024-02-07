@@ -1,0 +1,197 @@
+@import "./colors";
+i {
+  cursor: pointer;
+}
+.image {
+  background-color: #fff;
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover !important;
+  }
+}
+header {
+  position: relative;
+  .arrow-back {
+    position: absolute;
+    background-color: #fff;
+    top: 2.25rem;
+    left: 2rem;
+    cursor: pointer;
+    i {
+      font-size: 1.5rem;
+      background-color: #fff;
+    }
+  }
+}
+main {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1rem 0;
+  z-index: 10;
+  .menu-div {
+    padding: 1rem;
+    background-color: #eee;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .head {
+      .heart {
+        display: inline;
+        margin-left: 3.5rem;
+        background-color: #eee;
+      }
+      margin-top: 1rem;
+      font-style: italic;
+      background-color: #eee;
+      border-radius: 20px;
+      h1 {
+        display: inline-block;
+        font-weight: 500;
+        background-color: #eee;
+        border-radius: 20px 20px 0 0;
+      }
+    }
+    .options {
+      margin-top: 2.5rem;
+      background-color: #eee;
+      width: 90%;
+      h3 {
+        background-color: #eee;
+      }
+      .head-title {
+        display: inline;
+        border-bottom: 2px solid #99e2d0;
+        font-weight: 100;
+        font-size: 15px;
+      }
+      div,
+      .item,
+      .t,
+      p {
+        background-color: #fff;
+      }
+      p {
+        font-weight: 100;
+      }
+      .t {
+        font-weight: 500;
+      }
+      .item {
+        position: relative;
+        box-shadow: 5px 5px 15px rgba(169, 169, 169, 0.19),
+          0 6px 6px rgba(166, 166, 166, 0.23);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-top: 1rem;
+        border-radius: 10px;
+        .left {
+          min-width: 200px;
+          p,
+          h3 {
+            margin: 0; /* Remove default margin */
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis;
+          }
+        }
+        .price {
+          display: flex;
+          align-items: end;
+          font-weight: 700;
+          transition: all 0.3s ease;
+        }
+        .side-box {
+          background-color: #99e2d0;
+          position: absolute;
+          width: 0;
+          height: 100%;
+          right: 0;
+          top: 0;
+          transition: all 0.3s ease;
+          border-radius: 0 10px 10px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          i {
+            background-color: #99e2d0;
+            color: #eee;
+          }
+          // display: none;
+        }
+        &:hover .side-box {
+          animation: slide 0.3s forwards;
+        }
+        &:hover .price {
+          margin-right: 75px;
+        }
+        &:not(:hover) .side-box {
+          animation: reverse-slide 0.3s forwards;
+          // width: 100px;
+        }
+      }
+    }
+    background-color: #eee;
+    border-radius: 20px;
+    width: 80%;
+  }
+  margin-top: -3rem;
+}
+button {
+  margin: 2rem 0 0 0 !important;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+    width: 0px;
+  }
+  100% {
+    opacity: 1;
+    width: 80px;
+  }
+}
+@keyframes reverse-slide {
+  0% {
+    width: 80px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  main {
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 20px;
+    .menu-div {
+      margin-bottom: 0;
+      width: 100% !important;
+      border-radius: 50px 50px 0 0;
+      background-color: #eee;
+      .head {
+        .heart {
+          display: inline-block;
+          margin-left: 1rem;
+          background-color: $bg1;
+        }
+        width: 100%;
+        h1 {
+          text-align: start;
+        }
+      }
+    }
+    margin-top: -4rem;
+  }
+}
