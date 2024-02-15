@@ -139,7 +139,6 @@ main {
         }
         &:not(:hover) .side-box {
           animation: reverse-slide 0.3s forwards;
-          // width: 100px;
         }
       }
     }
@@ -176,6 +175,26 @@ button {
   }
 }
 @media screen and (max-width: 650px) {
+  @keyframes slide {
+    0% {
+      opacity: 1;
+      width: 0px;
+    }
+    100% {
+      opacity: 1;
+      width: 67px;
+    }
+  }
+  @keyframes reverse-slide {
+    0% {
+      width: 67px;
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0px;
+    }
+  }
   main {
     height: 100%;
     padding-bottom: 0;
